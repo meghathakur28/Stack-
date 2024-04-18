@@ -1,0 +1,29 @@
+import java.util.Stack;
+
+public class BasicsOfStack {
+    public static void main(String[] args) {
+        Stack<Integer> st=new Stack<>();
+        System.out.println("size of the stack is : "+st.size());
+        System.out.println(st.isEmpty());//check whether the stack is empty or not
+        st.push(2);    // insert the element on the top of the stack
+        st.push(10);       // insert the element on the top of the stack
+        st.push(33);
+        st.push(51);
+        st.push(1);
+        st.pop();  //remove the element from the top of the stack // 1
+        st.pop(); // remove the 51
+        st.pop();//33
+        st.pop();//10
+        System.out.println(st.peek());    // return the element which is on the top of the stack
+        System.out.println("isEmpty: "+st.isEmpty());//check whether the stack is empty or not
+        System.out.println("size of the stack is : "+st.size());
+        st.push(3);//insert the element 3 on the top of the stack
+        st.push(10);
+        st.push(56);
+        st.push(11);
+        st.pop();
+        System.out.println(st); // for displaying the elements of the stack (st is the name of the stack)
+        System.out.println("size of the stack is : "+st.size());
+
+    }
+}
