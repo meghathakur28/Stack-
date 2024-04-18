@@ -1,0 +1,32 @@
+import java.util.Stack;
+import java.util.Scanner;
+public class MoveStackInSameOrder {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Stack<Integer> st=new Stack<>();
+        System.out.println("enter the no of elements you want: ");
+        int n=sc.nextInt();
+        System.out.println("enter the elements: ");
+        for(int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            st.push(x);
+        }
+        System.out.println("The stack: "+st);
+        Stack<Integer> rt= new Stack<>();
+        while(st.size()>0)
+        {
+            int a=st.peek();
+            rt.push(a);
+            st.pop();
+
+        }
+        Stack<Integer> st1=new Stack<>();
+        while(rt.size()>0)
+        {
+            st1.push(rt.pop());
+        }
+        System.out.println("coping the stack in another stack in same order: "+st1);
+
+    }
+}
