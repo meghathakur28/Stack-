@@ -1,0 +1,44 @@
+import java.util.*;
+class HelloWorld {
+    static class Arlist{
+    static ArrayList<Integer> list=new ArrayList<>();
+    public static int size=0;
+    public static void push(int data)
+    {
+        list.add(data);
+        size++;
+    }
+    public static int pop()
+    {
+        int a=list.get(size-1);
+        list.remove(size-1);
+        size--;
+        return a;
+    }
+    public static void display()
+    {
+        System.out.println(list);
+    }
+    public static int peek()
+    {
+        if(size==0)
+        {
+            System.out.println("Stack is empty");
+        }
+        return list.get(size-1);
+    }
+}
+    public static void main(String[] args) {
+        Arlist arl=new Arlist();
+        arl.push(2);
+        arl.push(3);
+        arl.push(4);
+        arl.push(5);
+        arl.push(6);
+        System.out.println("The removed element: "+arl.pop());
+        System.out.println("Peek element: "+arl.peek());
+        System.out.println("Size of the stack: "+arl.size);
+        arl.display();
+        
+    }
+}
